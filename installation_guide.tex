@@ -15,10 +15,18 @@
             colorlinks}
 \urlstyle{same}
 
+\usepackage{draftwatermark}
+\SetWatermarkAngle{45}
+\SetWatermarkLightness{0.8}
+\SetWatermarkFontSize{5cm}
+\SetWatermarkScale{4}
+%\SetWatermarkText{CONFIDENTIAL}
+
 \begin{document}
 
 \title{Scarlet Installation \& Configuration Guide}
-\author{Silas Baronda}
+\author{Silas Baronda\\\href{mailto:barondas@cse.ohio-state.edu}{barondas@cse.ohio-state.edu}}
+
 \date{\today}
 \maketitle
 
@@ -30,13 +38,13 @@
 
 \section{Introduction}
 
-Scarlet is an application used by the \href{http://biology.osu.edu/}{Center of Life Sciences Education} to assist with various tasks, such as processing exams, administrating workshops, documenting TA progress, and administrating ASC Surveys.
+Scarlet is an application used by the \href{http://biology.osu.edu/}{Center for Life Sciences Education} to assist with various tasks, such as processing exams, administering workshops, documenting TA progress, and administering ASC surveys.
 
 Scarlet has many different features that you choose from when configuring.
 
 \begin{itemize}
 \item a TA database
-\item TA Faqs
+\item TA FAQs
 \item Courses
 \item Textbooks
 \item Workshops
@@ -53,34 +61,31 @@ Note:
 At OSU Biology we use Xen servers for hosting our applications and VirtualBox for any desktop development.  We also recommend VirtualBox for any one-off installations of Scarlet.
 
 Note:
-\textit{.ova} format does not require you to use VirtualBox and isn’t exclusive to VirtualBox.  The \textit{.ova} format is an industrial standard that should be supported by any enterprise virtualization software available after September 2007.  If your virtualization software does not support \textit{.ova} format then you need to contact your virtualization software vendor for assistance.  This documentation is a written guide to installing Scarlet on ViritualBox.
+\textit{.ova} format does not require you to use VirtualBox and is not exclusive to VirtualBox.  The \textit{.ova} format is an industry standard that should be supported by any enterprise virtualization software available after September 2007.  If your virtualization software does not support \textit{.ova} format then you need to contact your virtualization software vendor for assistance.  This documentation is a written guide to installing Scarlet on ViritualBox.
 
 \subsection{Requirements}
 
 \begin{itemize}
-\item A computer that can run VirtualBox 4.0.4 or greater.
-\item Able to assign a public IP Address to the appliance.
-\item Require port 80 to be opened to and from the internet.
-Optionally
-\item Setup a domain name to point to this public interface.
+\item VirtualBox 4.0.4 or greater
+\item a statically assigned public IP address 
+\item port 80 to be opened to and from the internet
+\item domain name to point to this public interface
 \end{itemize}
 
 Note:
-The server acquires its IP address via a DHCP server.  You can assign a static IP address via the MAC address for a DHCP server.  The MAC address for a VirtualBox appliance can be found in the Networking Settings for the appliance.
+The server acquires its IP address via a DHCP server.  You can assign a static IP address via the MAC address for a DHCP server.  The MAC address for a VirtualBox appliance can be found in the Networking Settings for the appliance. You will need to provide the appliance's MAC address to your network administrator to always get the same IP address.
 
 \subsection{Time Required}
 
-With a recent machine created in the last two years, it should take at most two hours to install.
+On a modern coputer, (less than two years old), installation should take at most two hours to install.
 
-DNS Propagation might take up to 48 hours.
+If you choose to setup a domain name, please know that DNS Propagation might take up to 48 hours.
 
 \section{Installing Scarlet}
 
 These next sections will take you through the process or installing Scarlet on your system.
 
 \subsection{Requirements}
-
-Installing Scarlet requires that you are able to retrieve two IP addresses from your DHCP provider.  If do know what these terms mean then you need to contact your network administrator for help.
 
 Because Scarlet was built inside VirtualBox virtualization software, you will need to first download this software.  Scarlet is most compatible with VirtualBox but should work in other virtualization software.
 \footnote{Scarlet was exported from VirtualBox in a \textit{.ova} file.  This file should be compatible with other software that can convert \textit{.ova}.}
@@ -264,7 +269,7 @@ Upon booting up \textit{Scarlet} you may encounter a \verb+Nonexistant host netw
         \label{fig:network_error}
     \end{figure}
     
-To fix this follow section~\ref{sec:configuration} on page~\pageref{sec:configuration}.
+To fix this complete the steps listed in section~\ref{sec:configuration} on page~\pageref{sec:configuration}.
 
 
 \end{document}
