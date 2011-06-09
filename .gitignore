@@ -6,3 +6,4 @@
 *.lof
 *.out
 *.toc
+!scarlet_images/*.pdf
